@@ -60,10 +60,16 @@ const App = () => {
   }, []);
 
   const handleLogin = (username) => {
+    let avatarUrl;
+    if (username.trim().toLowerCase() === "pratham") {
+      avatarUrl = "/avatars/pratham.png"; // Path relative to public folder
+    } else {
+      avatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`;
+    }
     const userData = {
       id: Date.now().toString(),
       username,
-      avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`
+      avatar: avatarUrl
     };
     setUser(userData);
     setShowLogin(false);
