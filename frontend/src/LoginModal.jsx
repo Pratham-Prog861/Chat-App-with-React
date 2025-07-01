@@ -11,15 +11,15 @@ const LoginModal = ({ onLogin }) => {
     setError('');
     if (!username.trim()) return;
     setLoading(true);
-    let gender = 'male'; // default
+    let gender = 'male';
     try {
       const res = await fetch(`https://api.genderize.io?name=${encodeURIComponent(username.trim())}`);
       const data = await res.json();
       if (data.gender === 'male' || data.gender === 'female') {
         gender = data.gender;
       }
-    } catch (error) {
-      console.error('Error detecting gender:', error);
+    } catch (err) {
+      console.error('Error detecting gender:', err);
     }
     setLoading(false);
     onLogin(username.trim(), gender);
