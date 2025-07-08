@@ -111,7 +111,7 @@ const App = () => {
         {/* Header */}
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold text-gray-800">Chat App</h1>
+            <h1 className="text-xl font-bold text-gray-800">ChatSync</h1>
             <button
               onClick={handleLogout}
               className="p-2 text-gray-500 hover:text-red-500 transition-colors"

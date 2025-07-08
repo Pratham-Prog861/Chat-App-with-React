@@ -18,7 +18,7 @@ const LoginModal = ({ onLogin }) => {
           <div className="mx-auto w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
             <MessageCircle className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome to Chat App</h1>
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome to ChatSync</h1>
           <p className="text-gray-600">Enter your username to start chatting</p>
         </div>
 
